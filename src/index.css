@@ -197,3 +197,10 @@ hr {
   color: var(--color-cyan);
   transition: all 0.5s ease-in-out;
 }
+
+@media only screen and (max-width: 375px) {
+  .card {
+    margin: 10rem auto;
+    width: 90%;
+  }
+}

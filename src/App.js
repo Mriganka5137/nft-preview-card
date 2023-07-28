@@ -21,7 +21,7 @@ function App() {
       <section className="price-container">
         <div className="price-box">
           <img src={eth} alt="etherum" />
-          <span> 0.041ETH</span>
+          <span> 0.041 ETH</span>
         </div>
 
         <div className="time-box">
