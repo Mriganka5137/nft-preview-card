@@ -34,3 +34,166 @@ The designs were created to the following widths:
 - Weights: 300, 400, 600
 
 */
+
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
+
+:root {
+  --color-soft-blue: hsl(215, 51%, 70%);
+  --color-cyan: #00fff7;
+  --color-white: hsl(0, 0%, 100%);
+  --color-dark-blue-main: hsl(217, 54%, 11%);
+  --color-dark-blue-card: hsl(216, 50%, 16%);
+  --color-dark-blue-line: hsl(215, 32%, 27%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  background-color: var(--color-dark-blue-main);
+  font-family: "Outfit", sans-serif;
+}
+
+.card {
+  max-width: 35rem;
+  margin: 15rem auto;
+  padding: 2.2rem;
+  background-color: var(--color-dark-blue-card);
+  border-radius: 1rem;
+  box-shadow: 5px 15px 35px 15px rgba(0, 0, 0, 0.335);
+}
+
+.hero-container {
+  width: 100%;
+
+  margin-bottom: 1.8rem;
+  position: relative;
+  display: inline-block;
+}
+
+.hero-image {
+  border-radius: 1rem;
+  width: 100%;
+  cursor: pointer;
+}
+
+.icon-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 100%;
+  width: 100%;
+  transform: translate(-50%, -50%);
+  pointer-events: none; /* Allows mouse events to pass through the icon to the image */
+  opacity: 0;
+  /* background-color: #00fff78d; */
+
+  transition: all 0.5s ease-in-out;
+  border-radius: 1rem;
+}
+
+.icon {
+  width: 5rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* padding: 10rem; */
+}
+
+.hero-container:hover .icon-container {
+  background-color: #00fff767;
+  opacity: 1;
+}
+.header {
+  font-size: 2.2rem;
+  color: var(--color-white);
+  cursor: pointer;
+  margin-bottom: 2rem;
+}
+
+.header:hover {
+  color: var(--color-cyan);
+  transition: all 0.5s ease-in-out;
+}
+
+.card-details p {
+  font-size: 1.8rem;
+  color: var(--color-soft-blue);
+  font-weight: 300;
+  word-spacing: 2px;
+  margin-bottom: 2rem;
+}
+.price-container {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.5rem;
+  padding: 0 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.price-box {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: space-between;
+}
+.price-box img {
+  width: 1rem;
+  /* height: 1.5rem; */
+}
+
+.price-box span {
+  color: var(--color-cyan);
+}
+
+.time-box {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: space-between;
+}
+.time-box img {
+  width: 2rem;
+}
+
+.time-box span {
+  color: var(--color-soft-blue);
+}
+
+hr {
+  border: none; /* Remove the default border */
+  height: 1px; /* Set the original height (1px) to create the scale effect */
+  background-color: var(--color-soft-blue); /* Set the color of the hr */
+  transform: scaleY(
+    0.25
+  ); /* Adjust the scale to make the hr thinner (0.5 scales it to half) */
+  margin-bottom: 2rem;
+}
+.creator-box {
+  display: flex;
+  align-items: center;
+  font-size: 1.7rem;
+  gap: 2rem;
+  color: var(--color-soft-blue);
+  margin-bottom: 1.5rem;
+}
+
+.creator-box img {
+  width: 3rem;
+  padding: 0.1rem;
+  border-radius: 50%;
+  background-color: var(--color-white);
+}
+
+.creator {
+  color: var(--color-white);
+  cursor: pointer;
+}
+
+.creator:hover {
+  color: var(--color-cyan);
+  transition: all 0.5s ease-in-out;
+}
